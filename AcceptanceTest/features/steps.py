@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-<<<<<<< HEAD
 from lettuce import step, world
-=======
-from lettuce import step,world
->>>>>>> 0c9b53e11fc87e6517e3ea9d086d890aa6e55a86
 import sys
 sys.path.append('../')
 from Calculator import Calculator
