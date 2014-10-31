@@ -2,38 +2,45 @@
 import unittest
 import sys
 sys.path.append('../')
-from Calculator2 import Calculator2
+from Calculator import Calculator
 
 
 class TestCalculator(unittest.TestCase):
 
     def testsuma_2_mas_2(self):
-        cal = Calculator2()
-        self.assertEqual(4, cal.suma(2, 2))
+        parametros= ["Suma", 2, 2]
+        cal = Calculator(parametros)
+        self.assertEqual(4, cal.getResult())
 
     def testsuma_598_mas_4380(self):
-        cal = Calculator2()
-        self.assertEqual(4978, cal.suma(598, 4380))
+        parametros= ["Suma", 598, 4380]
+        cal = Calculator(parametros)
+        self.assertEqual(4978, cal.getResult())
 
     def testresta_100_menos_99(self):
-        cal = Calculator2()
-        self.assertEqual(1, cal.resta(100, 99))
+        parametros= ["Resta", 100, 99]
+        cal = Calculator(parametros)
+        self.assertEqual(1, cal.getResult())
 
     def testresta_8_menos_9(self):
-        cal = Calculator2()
-        self.assertEqual(-1, cal.resta(8, 9))
+        parametros= ["Resta", 8, 9]
+        cal = Calculator(parametros)
+        self.assertEqual(-1, cal.getResult())
 
     def testmult_11_por_8(self):
-        cal = Calculator2()
-        self.assertEqual(88, cal.mult(11, 8))
+        parametros= ["Multiplicacion", 11, 8]
+        cal = Calculator(parametros)
+        self.assertEqual(88, cal.getResult())
 
     def testdiv_36_entre9(self):
-        cal = Calculator2()
-        self.assertEqual(4, cal.div(36, 9))
+        parametros= ["Division", 36, 9]
+        cal = Calculator(parametros)
+        self.assertEqual(4, cal.getResult())
 
     def testdiv_5_entre_2(self):
-        cal = Calculator2()
-        self.assertEqual(2.5, cal.div(5.0, 2.0))
+        parametros= ["Division", 5.0, 2.0]
+        cal = Calculator(parametros)
+        self.assertEqual(2.5, cal.getResult())
 
 if __name__ == "__main__":
     unittest.main()
