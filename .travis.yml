@@ -12,5 +12,6 @@ script:
 - lettuce AcceptanceTest
 - cd UnitTest
 - python Calculator.py -v
+- cd UnitTest
 - coverage run --branch TestCalculator.py
 - coverage report -m
